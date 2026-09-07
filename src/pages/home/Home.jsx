@@ -4,6 +4,7 @@ import Brands from "./Brands/Brands";
 import liveTrackingImage from "../../assets/live-tracking.png";
 import safeDeliveryImage from "../../assets/safe-delivery.png";
 import locationImage from "../../assets/location-merchant.png";
+import Reviews from "./Reviews/Reviews";
 const features = [
   {
     title: "Live Parcel Tracking",
@@ -24,6 +25,8 @@ const features = [
     image: safeDeliveryImage,
   },
 ];
+
+const reviewsPromise=fetch('/public/reviews.json').then(res=>res.json())
 
 const Home = () => {
   return (
@@ -333,6 +336,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+    </section>
+
+    <section>
+      <Reviews reviewsPromise={reviewsPromise}></Reviews>
     </section>
 
     </div>
