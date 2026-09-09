@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ReviewCard from './ReviewCard';
 
@@ -13,6 +13,7 @@ const Reviews = ({reviewsPromise}) => {
             <p className='px-3 my-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum deserunt fugiat reprehenderit alias praesentium, magni nulla dignissimos! Cum doloribus vel omnis sequi vero molestiae pariatur quam! Quis assumenda quae temporibus.</p>
         </div>
         <Swiper
+        loop={true}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -24,8 +25,12 @@ const Reviews = ({reviewsPromise}) => {
           modifier: 1,
           slideShadows: true,
         }}
+         autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
       >
         {

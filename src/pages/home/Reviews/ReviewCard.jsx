@@ -28,7 +28,6 @@ const ReviewCard = ({ review }) => {
             className="w-full h-full object-cover hidden" 
           />
         </div>
-
         {/* Name and Title */}
         <div>
           <h3 className="text-[#1F4145] font-bold text-base leading-tight">
