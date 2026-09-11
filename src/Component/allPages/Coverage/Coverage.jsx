@@ -40,7 +40,7 @@ const Coverage = () => {
            </form>
         </div>
 
-        <div className='w-full   h-[800px] my-10'>
+        <div className='w-full h-[800px] my-10'>
         <MapContainer center={position}
          zoom={8} 
          scrollWheelZoom={false}
