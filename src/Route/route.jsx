@@ -7,6 +7,7 @@ import Login from "../Component/allPages/Auth/Login/Login";
 import Register from "../Component/allPages/Auth/register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Rider from "../pages/Rider/Rider";
+import About from "../pages/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
+      },
+      {
+        path:"/about",
+        Component:About,
       },
       {
         path: "/rider",
