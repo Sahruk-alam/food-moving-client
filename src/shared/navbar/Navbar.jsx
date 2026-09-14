@@ -10,12 +10,13 @@ const Navbar = () => {
     .then(()=>{})
     .catch(err=>console.log(err))
   }
-  const links=<>
+  const links=< >
       <li><NavLink to="/">Home</NavLink></li>
-      <li><NavLink to="/about">About</NavLink></li>
-      <li><NavLink to="/contact">Contact</NavLink></li>
+      <li><NavLink to="/services">Services</NavLink></li>
       <li><NavLink to="/coverage">Coverage</NavLink></li>
-  
+       <li><NavLink to="/about">About</NavLink></li>
+      <li><NavLink to="/pricing">Pricing</NavLink></li>
+      <li><NavLink to="/send-parcel">Send a Parcel</NavLink></li>
   </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -30,7 +31,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">
+    <a className="ml-2 btn-ghost text-xl">
       <Logo></Logo>
     </a>
   </div>
